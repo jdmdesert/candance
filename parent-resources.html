@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Class-specific updates and resources for CanDance Studio parents.">
+  <title>Parent Resources | CanDance Studios</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="parent-resources.js" defer></script>
+</head>
+<body class="resource-page">
+  <header class="site-header resource-header">
+    <a class="header-logo" href="index.html" aria-label="CanDance home"><img src="images/candance-logo.png" alt="CanDance"></a>
+    <a class="back-home" href="index.html">← Back to main site</a>
+  </header>
+
+  <main>
+    <section class="resource-hero">
+      <p class="eyebrow">CanDance families</p>
+      <h1>Parent<br><em>Resources.</em></h1>
+      <p>Select your child’s class to see only the updates and reminders that apply to them. Your selection will be remembered on this device.</p>
+    </section>
+
+    <section class="class-finder" aria-labelledby="class-finder-title">
+      <div class="finder-panel">
+        <label for="class-select" id="class-finder-title">Find your child’s class</label>
+        <select id="class-select">
+          <option value="">Choose a class or team</option>
+          <optgroup label="Recreational Classes">
+            <option>Combo Classes</option><option>Ballet</option><option>Jazz</option><option>Hip Hop</option><option>Technique &amp; Stretch</option><option>Musical Theater &amp; Pom</option><option>Lyrical &amp; Contemporary</option>
+          </optgroup>
+          <optgroup label="Performance & Competitive Teams">
+            <option>CanCan’s</option><option>Mini CanDancers</option><option>Junior CanDancers</option><option>Teen CanDancers</option><option>Pre Company</option><option>Petite Company</option><option>Mini Company</option><option>Junior Company</option><option>Teen &amp; Senior Company</option><option>Distrykt Hip Hop Company</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="selected-class" id="selected-class" hidden aria-live="polite">
+        <div class="selected-heading"><div><p class="eyebrow">Your selected class</p><h2 id="selected-name"></h2></div><button id="change-class" type="button">Change class</button></div>
+        <div class="update-grid">
+          <article><span>Latest update</span><h3>Welcome to your class hub</h3><p>There are no new class-specific announcements right now. Updates from the studio can be posted here as they become available.</p></article>
+          <article><span>What to wear</span><h3>Class dress code</h3><p id="dress-code"></p><a href="https://www.candancestudios.com/dress-code" target="_blank" rel="noreferrer">Full dress code →</a></article>
+          <article><span>Need assistance?</span><h3>Contact the studio</h3><p>Questions about this class, placement, tuition, or attendance?</p><a id="class-email" href="mailto:info@candancestudios.com">Email CanDance →</a></article>
+        </div>
+      </div>
+
+      <div class="class-directory" id="class-directory">
+        <p class="directory-label">All studio classes and teams</p>
+        <div id="class-buttons" class="class-buttons"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="resource-footer"><p>CanDance Studios · 1495 S Higley Rd, Suite 101 · Gilbert, AZ 85296</p><a href="tel:+14808073052">(480) 807-3052</a></footer>
+</body>
+</html>
