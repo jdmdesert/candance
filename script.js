@@ -55,7 +55,8 @@ navigation.addEventListener('click', () => {
   menuButton.textContent = '☰';
 });
 
-function openTrial() {
+function openTrial(className = 'Not sure yet') {
+  modal.querySelector('select[name="style"]').value = className;
   modal.hidden = false;
   document.body.style.overflow = 'hidden';
   setTimeout(() => modal.querySelector('input').focus(), 0);
@@ -68,7 +69,8 @@ function closeTrial() {
   successView.hidden = true;
 }
 
-document.querySelectorAll('.trial-button, .try-class').forEach(button => button.addEventListener('click', openTrial));
+document.querySelectorAll('.trial-button').forEach(button => button.addEventListener('click', () => openTrial()));
+document.querySelectorAll('.try-class').forEach(button => button.addEventListener('click', () => openTrial(button.dataset.class)));
 document.querySelector('.modal-close').addEventListener('click', closeTrial);
 document.querySelector('.done-button').addEventListener('click', closeTrial);
 modal.addEventListener('click', event => { if (event.target === modal) closeTrial(); });
